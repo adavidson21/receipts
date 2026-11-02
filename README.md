@@ -12,7 +12,7 @@ Successor to [TaskLedger](https://github.com/adavidson21/TaskLedger), the Androi
 - **Reports**: one page per direct report. Wins, feedback you gave, growth areas, and concerns. The list flags anyone you haven't noted anything about in 30 days (configurable).
 - **Upward** (optional, off until you turn it on): support you got from your manager, asks, and feedback to share, for upward reviews and skip-levels.
 - **Review**: pick who and a period (your review cycle, this quarter, last quarter, this year, last 12 months). Shows coverage per section, flags sections with no receipts, and builds a plain-text draft you can copy or download. CSV export too.
-- **Settings**: your review cycle dates, your company's review sections (one per line), backups.
+- **Settings**: your review cycle dates, your company's review sections (one per line), backups. Receipts starts with its own generic sections (Results, Craft, Ownership, Collaboration, Communication, Leadership, Growth), not any company's form; replace them with yours, and they stay on your device. If your receipts use sections that are not in your list, Settings offers to add them.
 
 Shortcuts: `N` jumps to the box for a new receipt, `Ctrl+Enter` saves it.
 
