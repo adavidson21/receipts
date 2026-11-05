@@ -1,13 +1,13 @@
 /* Rapport's 1:1s: the rules, with no DOM or SDK, so Node tests can import them.
 
    1:1s was its own Workshop app (id `oneonones`) until Rapport 2.0.0 folded it in. It keeps its own
-   `oneonones/people` link table inside Rapport (app id `receipts`) and reads (never writes) what Docket keeps
-   about the same people. Rapport's own entries and people are handed in by main.js. Each read checks the envelope's schema and version: an unknown version is
+   `oneonones/people` link table inside Rapport (app id `receipts`) and reads (never writes) what Docket publishes
+   about the same people, in its summary. Rapport's own entries and people are handed in by main.js. Each read checks the envelope's schema and version: an unknown version is
    unreadable, not empty (docs/data-format.md, Migrations, rule 6).
 
    Shapes read from other apps (copied here, not imported: apps never import other app folders):
-     prioritizer.tasks v3    items: {id, title, people: [name], done, waiting, nudgeOn, due, ...}
-     prioritizer.people v1   items: {id: lower-case name, name}
+     prioritizer.summary v1  Docket's summary (docs/summaries.md): the `people` card, rows {name, open, waiting},
+                             each task {id, title, due, nudgeOn}
      receipts.entries v1     items: {id, about: 'me' | 'up' | person id, kind, date, text, ...}
      receipts.people v1      items: {id, name, role, since, archived}
      settings.people v1      Workshop's people directory (docs/people.md): {id, name, relation, team?, adoIdentity?,
